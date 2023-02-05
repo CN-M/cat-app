@@ -48,21 +48,12 @@ export default function Home({ catData }) {
         <div className={styles.grid}>
           {
             catData.map((fact) => (
-              <a  
-                href={`/facts/${fact._id}`}
-                className={styles.card}
-                rel="noopener noreferrer"
-                key={fact._id}
-                >
-                  <h2 className={inter.className}>
-                    Status: {String(fact.status.verified).toUpperCase()}
-                  </h2>
-                  <p className={inter.className}>
-                    {fact.text}
-                  </p>
+              <a href={`/facts/${fact._id}`} key={fact._id} className={styles.card}>
+                <h2>Status: {String(fact.status.verified).toUpperCase()}</h2>
+                <p>{fact.text}</p>
               </a>
-              ))
-            }
+            ))
+          }
           </div>
           <div className="random-div" />
       </Layout>
