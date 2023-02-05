@@ -51,7 +51,6 @@ export default function Home({ catData }) {
               <a  
                 href={`/facts/${fact._id}`}
                 className={styles.card}
-                target="_blank"
                 rel="noopener noreferrer"
                 key={fact._id}
                 >
